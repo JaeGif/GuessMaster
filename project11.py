@@ -456,7 +456,7 @@ def play(score, GameWin, GameCircles, CirclesText, BlockP,
         meteor.setFill('red')
         meteor.draw(GameWin)
         dy = 1
-        dx = random.randrange(-5, 5)
+        dx = random.randrange(-1, 1)
 
     while Result == 'Playing':
         mouse_pos = CtrlWin.checkMouse()
@@ -527,7 +527,7 @@ def play(score, GameWin, GameCircles, CirclesText, BlockP,
                         else:
                             Result = 'Lose'
 
-            meteor.move(dx + (i / 2), dy + (i / 2))  # moves meteor by dx and dy which are random values
+            meteor.move(dx + (i / 999999999999), dy + (i / 999999999999))  # moves meteor by dx and dy which are random values
 
         ## Define outcomes if click is in Ctrl Window
         if mouse_pos:
