@@ -26,12 +26,12 @@
 #  within 4-6 letters, and is not already in the list. If those requirements
 #  are met, the word is added. Or else, an error message is displayed.
 
-# Import libraries
-from graphics import *
-import string
 import random
+import string
 from time import sleep
 
+# Import libraries
+from graphics import *
 
 
 # The ctrPan() function creates the control panel for the game. It accepts no
@@ -476,7 +476,6 @@ def play(score, GameWin, GameCircles, CirclesText, BlockP,
                 meteor.setFill('red')
                 meteor.draw(GameWin)
 
-
             if game_mouse != None:
                 xVal = game_mouse.getX()
                 yVal = game_mouse.getY()
@@ -527,7 +526,8 @@ def play(score, GameWin, GameCircles, CirclesText, BlockP,
                         else:
                             Result = 'Lose'
 
-            meteor.move(dx + (i / 999999999999), dy + (i / 999999999999))  # moves meteor by dx and dy which are random values
+            meteor.move(dx + (i / 999999999999),
+                        dy + (i / 999999999999))  # moves meteor by dx and dy which are random values
 
         ## Define outcomes if click is in Ctrl Window
         if mouse_pos:
